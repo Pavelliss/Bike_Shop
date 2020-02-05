@@ -1,0 +1,49 @@
+@media (max-width: $mobile-width) {
+  .user {
+    &--authorized {
+      .user__login {
+        display: none;
+      }
+
+      .user__name,
+      .user__logout {
+        display: block;
+      }
+    }
+  }
+
+  .user__name {
+    display: none;
+    padding-left: 22px;
+    font-family: $roboto;
+    letter-spacing: 0.04em;
+
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+  }
+
+  .user__login {
+    margin-left: auto;
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .user__logout {
+    display: none;
+    margin-left: auto;
+
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

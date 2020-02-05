@@ -5,7 +5,7 @@
   list-style: none;
 }
 
-@mixin position-abs ($top, $left, $bottom, $right) {
+@mixin position-abs ($top, $left, $bottom: auto, $right: auto) {
   position: absolute;
   top: $top;
   left: $left;

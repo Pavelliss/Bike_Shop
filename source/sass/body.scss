@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  min-height: 1000px;
+}
+
 .visually-hidden:not(:focus),
 input[type="radio"],
 input[type="checkbox"] {
@@ -25,4 +29,25 @@ img {
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: $mobile-width) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    height: 50px;
+    background-color: $brown;
+    border-radius: 3px;
+  }
 }

@@ -4,13 +4,16 @@ $brown--ligth: #baa480;
 $brown: #9b8869;
 $brown--dark: #817155;
 $red: #ba4f4f;
+$dark: #1e1e1d;
+$light: #f0ede8;
 
-//width
-$modile-width: 320px;
-$modile-max-width: 767px;
-$tablet-width: 768px;
-$modile-max-tablet: 1199px;
-$desktop-width: 1200px;
+//max-width
+$mobile-width: 767px;
+$tablet-width: 1023px;
+
+//fonts
+$roboto: "Roboto", "Arial", sans-serif;
+$hagin: "Hagin Caps Medium", "Arial", serif;
 
 //graphics
 $retina-dpi: 144dpi;

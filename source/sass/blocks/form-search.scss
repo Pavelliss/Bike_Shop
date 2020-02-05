@@ -1,0 +1,38 @@
+.form-search {
+  position: relative;
+  width: 90%;
+
+  svg {
+    @include position-abs(2px, 0);
+    display: inline-block;
+    padding-top: 4px;
+
+    fill: $brown;
+  }
+
+  input {
+    width: 100%;
+    padding-left: 26px;
+    box-sizing: border-box;
+
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    color: inherit;
+
+    border: none;
+    background-color: inherit;
+
+    &::-webkit-input-placeholder {
+      color: inherit;
+    }
+
+    &::-moz-input-placeholder {
+      color: inherit;
+    }
+
+    &:focus + svg {
+      fill: $red;
+    }
+  }
+}
