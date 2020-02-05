@@ -1,4 +1,6 @@
 .header {
+  position: relative;
+
   min-height: 768px;
 
   font-family: $hagin;
@@ -29,6 +31,16 @@
       &:active {
         opacity: 0.3;
       }
+    }
+
+    .nav__item a:hover,
+    .nav__item a:focus {
+      opacity: 1;
+      color: $dark;
+    }
+
+    .nav__item a:active {
+      opacity: 0.3;
     }
   }
 }
@@ -87,6 +99,27 @@
 
 .header__button {
   display: none;
+}
+
+.header__social {
+  max-width: 1330px;
+  margin: 0 auto;
+
+  .social__list {
+    margin-left: auto;
+    margin-right: 14px;
+
+    a:hover svg,
+    a:focus svg {
+      fill: $brown--ligth;
+      transition-duration: 0.3s;
+    }
+
+    svg {
+      fill: #6a6454;
+      transition-duration: 0.3s;
+    }
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -254,5 +287,9 @@
 
     border-top: 2px solid $brown;
     border-bottom: 2px solid $brown;
+  }
+
+  .header__social {
+    display: none;
   }
 }

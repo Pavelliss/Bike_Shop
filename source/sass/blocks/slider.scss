@@ -1,0 +1,30 @@
+.slider {
+  font-family: $hagin;
+  color: $brown--dark;
+
+  background-color: $brown--lighten;
+}
+
+.slider__container {
+  max-width: 1123px;
+  padding-top: 80px;
+  margin: 0 auto;
+}
+
+.slider__title {
+  margin: 0;
+  padding: 0 70px;
+
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.slider__text {
+  padding: 0 260px;
+  box-sizing: border-box;
+  font-family: $roboto;
+  text-align: center;
+}

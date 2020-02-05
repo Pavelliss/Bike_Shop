@@ -1,0 +1,28 @@
+.button {
+  display: block;
+  width: 240px;
+  min-height: 60px;
+  box-sizing: border-box;
+
+  font-size: 24px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $brown;
+
+  background-color: transparent;
+  border: 1px solid $brown;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $brown;
+    color: $dark;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
