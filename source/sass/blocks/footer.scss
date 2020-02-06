@@ -1,0 +1,16 @@
+.footer {
+  min-height: 777px;
+
+  font-family: $hagin;
+  text-transform: uppercase;
+  color: $brown--ligth;
+
+  background-image: url("../img/workshop-bg@1x.jpg");
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/workshop-bg@2x.jpg");
+  }
+}
