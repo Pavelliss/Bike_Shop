@@ -1,0 +1,130 @@
+.workshop {
+  min-height: 576px;
+  padding-top: 113px;
+  box-sizing: border-box;
+
+  font-family: $hagin;
+  font-weight: normal;
+  color: $brown--ligth;
+
+  background-image: url("../img/workshop-bg@1x.jpg");
+  background-color: $dark;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/workshop-bg@2x.jpg");
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 10px;
+
+    font-family: $roboto;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    color: $brown--lighten;
+  }
+}
+
+.workshop__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1050px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.workshop__image {
+  width: 44%;
+  padding-top: 10px;
+  margin-left: 18px;
+
+  img {
+    display: block;
+  }
+}
+
+.workshop__container-text {
+  width: 48.7%;
+}
+
+.workshop__title {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.workshop__button {
+  margin-top: 43px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: $tablet-width) {
+  .workshop {
+    padding-top: 50px;
+  }
+
+  .workshop__container {
+    flex-direction: column;
+    justify-content: baseline;
+    padding: 0 25px;
+  }
+
+  .workshop__image {
+    width: 100%;
+    margin-left: 0;
+    order: 2;
+  }
+
+  .workshop__container-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .workshop__button {
+    display: none;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .workshop {
+    padding-top: 24px;
+
+    p {
+      padding: 0 2px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    br {
+      display: none;
+    }
+  }
+
+  .workshop__container {
+    padding: 0 15px;
+  }
+
+  .workshop__title {
+    margin-bottom: 16px;
+
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .workshop__image {
+    position: relative;
+    bottom: -30px;
+
+    padding-top: 0;
+    margin-top: -10px;
+  }
+}

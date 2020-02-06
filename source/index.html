@@ -128,7 +128,7 @@
       </ul>
     </div>
   </div>
-  <section class="slider">
+  <!-- <section class="slider">
     <div class="slider__container">
       <h2 class="slider__title">
         У нас Более 200 моделей прогулочных велосипедов для настоящих мужчин
@@ -149,21 +149,29 @@
         <a class="button slider__link" href="catalog.html">Все велосипеды</a>
       </div>
     </div>
-  </section>
+  </section> -->
   <section class="workshop">
     <div class="workshop__container">
-      <picture>
-        <source type="image/webp" srcset="img/master@1x.webp 1x, img/master@1x.webp 2x">
-        <img src="img/master@1x.jpg" srcset="img/master@2x.jpg" width="463" height="357" alt="Наш мастер">
-      </picture>
-      <h2 class="workshop__title">Мастерская</h2>
-      <p class="workshop__text">
-        Наши мастера всегда готовы привести в чувство вашего коня, кастомизировать любую модель или просто помочь советом.
-      </p>
-      <p class="workshop__text">
-        Возможен выезд по вашему адресу. Для велосипедов, купленных у нас, обслуживание предоставляется бесплатно.
-      </p>
-      <a class="button workshop__button">Подробнее</a>
+      <div class="workshop__image">
+        <picture>
+          <source type="image/webp" media="(min-width: 1024px)" srcset="img/master-desktop@1x.webp 1x, img/master-desktop@2x.webp 2x">
+          <source type="image/webp"  srcset="img/master-mobile@1x.webp 1x, img/master-mobile@2x.webp 2x">
+          <!--1x: 463px; 2x: 926px-->
+          <source media="(min-width: 1024px)" srcset="img/master-desktop@1x.jpg 1x, img/master-desktop@2x.jpg 2x">
+          <!--1x: 289px; 2x: 578px-->
+          <img src="img/master-mobile@1x.jpg" srcset="img/master-mobile@2x.jpg" width="463" height="357" alt="Наш мастер">
+        </picture>
+      </div>
+      <div class="workshop__container-text">
+        <h2 class="workshop__title">Мастерская</h2>
+        <p>
+          Наши мастера всегда готовы привести <br>в чувство вашего коня, кастомизировать любую модель или просто помочь советом.
+        </p>
+        <p>
+          Возможен выезд по вашему адресу.<br> Для велосипедов, купленных у нас, обслуживание предоставляется бесплатно.
+        </p>
+        <a class="button workshop__button">Подробнее</a>
+      </div>
     </div>
   </section>
 </body>
