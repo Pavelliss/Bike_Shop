@@ -2,11 +2,12 @@
   @include list-reset;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -25px;
 }
 
 .nav__item {
-  margin-bottom: 19px;
-  margin-right: 25px;
+  margin-bottom: 20px;
+  margin-left: 25px;
   box-sizing: border-box;
 
   transition-duration: 0.3s;

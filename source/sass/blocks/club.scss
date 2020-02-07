@@ -21,6 +21,10 @@
   }
 }
 
+.club__br--mobile {
+  display: none;
+}
+
 .club__container-text {
   width: 45%;
   margin-top: -10px;
@@ -71,6 +75,7 @@
 
 @media (max-width: $mobile-width) {
   .club {
+    margin-bottom: 0;
     padding: 0 15px;
     padding-top: 35px;
 
