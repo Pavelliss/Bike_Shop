@@ -2,6 +2,7 @@
   position: relative;
 
   min-height: 768px;
+  padding: 0 25px;
 
   font-family: $hagin;
   color: $brown;
@@ -42,6 +43,10 @@
     .nav__item a:active {
       opacity: 0.3;
     }
+
+    .header__value {
+      color: $red;
+    }
   }
 }
 
@@ -59,7 +64,7 @@
 .header__logo {
   display: block;
   margin-top: -5px;
-  padding-left: 2.5%;
+  padding-left: 2.3%;
   margin-right: 9.2%;
 }
 
@@ -71,15 +76,20 @@
 .header__links {
   display: flex;
   justify-content: space-between;
-  min-width: 115px;
   margin-top: 1px;
-  padding-right: 6px;
+  margin-left: -20px;
   box-sizing: border-box;
 }
 
 .header__link {
+  position: relative;
   display: block;
+  margin-left: 26px;
   transition-duration: 0.3s;
+
+  &--bookmarks {
+    display: none;
+  }
 
   svg {
     fill: $brown;
@@ -97,6 +107,15 @@
   }
 }
 
+.header__value {
+  @include position-abs(25px, 8px);
+  font-family: $roboto;
+  letter-spacing: 0.2px;
+  line-height: 18px;
+  font-weight: normal;
+  color: $brown--lighten;
+}
+
 .header__button {
   display: none;
 }
@@ -107,7 +126,6 @@
 
   .social__list {
     margin-left: auto;
-    margin-right: 14px;
 
     a:hover svg,
     a:focus svg {
@@ -146,6 +164,7 @@
 @media (max-width: $mobile-width) {
   .header {
     min-height: 568px;
+    padding: 0 15px;
 
     background-image: url("../img/main-image-mobile@1x.jpg");
 
@@ -165,8 +184,8 @@
 
   .header__page {
     padding-top: 16px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .header__logo {
@@ -183,7 +202,6 @@
 
   .header__links {
     margin-left: auto;
-    margin-right: -5px;
     min-width: auto;
   }
 
@@ -194,7 +212,7 @@
   }
 
   .header__button {
-    @include position-abs(21px, 15px);
+    @include position-abs(21px, 0);
     width: 18px;
     height: 14px;
 
