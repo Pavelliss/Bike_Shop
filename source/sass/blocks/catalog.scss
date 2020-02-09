@@ -67,6 +67,8 @@
 }
 
 .catalog__price {
+  display: block;
+  margin-top: 10px;
   font-size: 24px;
   line-height: 30px;
 
@@ -109,4 +111,44 @@
 
 .catalog__price {
   margin-top: 9px;
+}
+
+@media (max-width: $mobile-width) {
+  .catalog__image {
+    min-height: 270px;
+
+    img {
+      margin-top: 7px;
+    }
+  }
+
+  .catalog__brand {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .catalog__price {
+    margin-top: 4px;
+
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .catalog__basket {
+    top: 195px;
+
+    &:hover,
+    &:focus {
+      top: 195px;
+      width: 50px;
+      height: 50px;
+      opacity: 0.6;
+      transition-duration: 0.3s;
+    }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+  }
 }
