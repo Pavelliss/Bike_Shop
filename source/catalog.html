@@ -102,6 +102,201 @@
       </div>
     </header>
   </div>
+  <main class="main main--catalog">
+    <section class="filter">
+      <h2 class="visually-hidden"></h2>
+      <div class="filter__block-layout">
+        <p>
+          Показывать по
+          <a class="filter__link filter__link--active" href="#">12</a>&#160;| &#160;
+          <a class="filter__link" href="#">24</a>&#160;| &#160;
+          <a class="filter__link" href="#">Все</a>
+        </p>
+        <a class="filter__layout-grid" href="#">
+          <span class="visually-hidden">Плиточная раскладка</span>
+        </a>
+        <a class="filter__layout-list" href="#">
+          <svg width="12" height="11">
+            <use xlink:href="#icon-list"></use>
+          </svg>
+          <span class="visually-hidden">Раскладка списком</span>
+        </a>
+      </div>
+      <div class="filter__form">
+        <form method="POST" action="#">
+          <div class="range filter__range">
+            <div class="range__controle">
+              <div class="range__scale">
+                  <div class="range__bar"></div>
+              </div>
+              <div class="range__toggle range__toggle--min"></div>
+              <div class="range__toggle range__toggle--max"></div>
+          </div>
+          <div class="range__price-controls">
+              <label>
+                  <input type="text" name="min-value" value="от 0">
+              </label>
+              <label>
+                  <input type="text" name="max-value" value="до 5000">
+              </label>
+          </div>
+          </div>
+          <fieldset>
+            <legend>Электровелосипед</legend>
+            <label>
+              <input type="radio" name="electro-bike" value="yes">
+              <span class="filter__element"></span>
+              Да
+            </label>
+            <label>
+              <input type="radio" name="electro-bike" value="no">
+              <span class="filter__element"></span>
+              Нет
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Производитель</legend>
+            <label>
+              <input type="checkbox" name="neuser_chopper_apocalypse">
+              <span class="filter__element"></span>
+              Neuser Chopper Apocalypse
+            </label>
+            <label>
+              <input type="checkbox" name="schwinn_stingray_occ">
+              <span class="filter__element"></span>
+              Schwinn Stingray OCC
+            </label>
+            <label>
+              <input type="checkbox" name="harley_davidson">
+              <span class="filter__element"></span>
+              Harley Davidson
+            </label>
+            <label>
+              <input type="checkbox" name="micargi_cyclone_electric">
+              <span class="filter__element"></span>
+              Micargi Cyclone electric
+            </label>
+            <label>
+              <input type="checkbox" name="x-front_showmobile">
+              <span class="filter__element"></span>
+              X-Front Showmobile
+            </label>
+            <label>
+              <input type="checkbox" name="2fast4you_chopper">
+              <span class="filter__element"></span>
+              2fast4you chopper
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Материал рамы</legend>
+            <label>
+              <input type="checkbox" name="steel">
+              <span class="filter__element"></span>
+              Сталь
+            </label>
+            <label>
+              <input type="checkbox" name="carbon">
+              <span class="filter__element"></span>
+              Карбон
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Цвет</legend>
+            <label>
+              <input type="checkbox" name="black">
+              <span class="filter__element"></span>
+              Черный
+            </label>
+            <label>
+              <input type="checkbox" name="brown">
+              <span class="filter__element"></span>
+              Коричневый
+            </label>
+            <label>
+              <input type="checkbox" name="red">
+              <span class="filter__element"></span>
+              Красный
+            </label>
+            <label>
+              <input type="checkbox" name="blue">
+              <span class="filter__element"></span>
+              Голубой
+            </label>
+            <label>
+              <input type="checkbox" name="khaki">
+              <span class="filter__element"></span>
+              Хаки
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Размер</legend>
+            <label>
+              <input type="checkbox" name="53">
+              <span class="filter__element"></span>
+              53
+            </label>
+            <label>
+              <input type="checkbox" name="56">
+              <span class="filter__element"></span>
+              56
+            </label>
+            <label>
+              <input type="checkbox" name="59">
+              <span class="filter__element"></span>
+              59
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Колеса</legend>
+            <label>
+              <input type="checkbox" name="20">
+              <span class="filter__element"></span>
+              20
+            </label>
+            <label>
+              <input type="checkbox" name="22">
+              <span class="filter__element"></span>
+              22
+            </label>
+            <label>
+              <input type="checkbox" name="24">
+              <span class="filter__element"></span>
+              24
+            </label>
+            <label>
+              <input type="checkbox" name="26">
+              <span class="filter__element"></span>
+              26
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Кол-во скоростей</legend>
+            <label>
+              <input type="checkbox" name="3">
+              <span class="filter__element"></span>
+              3
+            </label>
+            <label>
+              <input type="checkbox" name="6">
+              <span class="filter__element"></span>
+              6
+            </label>
+            <label>
+              <input type="checkbox" name="9">
+              <span class="filter__element"></span>
+              9
+            </label>
+          </fieldset>
+          <select name="sorting">
+            <option value="popular">По популярности</option>
+            <option value="high-price">Сначала дешевле</option>
+            <option value="low-price">Сначала дешевле</option>
+          </select>
+          <button type="reset">Сбросить фильтры</button>
+        </form>
+      </div>
+    </section>
+  </main>
   <footer class="footer footer--inner">
     <div class="footer__container">
       <nav class="nav nav--footer footer__nav">
