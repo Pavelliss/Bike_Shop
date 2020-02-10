@@ -169,7 +169,7 @@
     margin-right: 10px;
   }
 
-  &:after {
+  &::after {
     margin-left: 10px;
   }
 }
@@ -181,12 +181,12 @@
     }
 
     .slider__button {
-      top: 650px
+      top: 650px;
     }
   }
 
   .slider__button {
-    top: 650px
+    top: 650px;
   }
 
   .slider__catalog {
@@ -227,7 +227,7 @@
       }
 
       .slider__button {
-        top: 523px
+        top: 523px;
       }
 
       .slider__container-link {
@@ -254,7 +254,7 @@
   }
 
   .slider__button {
-    top: 557px
+    top: 557px;
   }
 
   .slider__container-link {

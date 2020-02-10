@@ -34,7 +34,7 @@
     width: 166px;
     height: 229px;
 
-    border: 6px solid #F0EDE8;
+    border: 6px solid #ffffff;
   }
 
   img {
@@ -58,6 +58,8 @@
 }
 
 .catalog__info {
+  display: block;
+
   font-family: $roboto;
   font-size: 14px;
   text-transform: initial;
@@ -69,6 +71,7 @@
 .catalog__price {
   display: block;
   margin-top: 10px;
+
   font-size: 24px;
   line-height: 30px;
 
@@ -105,14 +108,6 @@
   }
 }
 
-.catalog__info {
-  display: block;
-}
-
-.catalog__price {
-  margin-top: 9px;
-}
-
 @media (max-width: $mobile-width) {
   .catalog__image {
     min-height: 270px;
@@ -146,9 +141,9 @@
       transition-duration: 0.3s;
     }
 
-  &:active {
-    opacity: 0.3;
-    transition-duration: 0.3s;
-  }
+    &:active {
+      opacity: 0.3;
+      transition-duration: 0.3s;
+    }
   }
 }
