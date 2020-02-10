@@ -1,0 +1,329 @@
+.filter {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  font-family: $hagin;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: $brown;
+}
+
+.filter__block-layout {
+  min-height: 60px;
+  margin-left: 10px;
+  padding-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+  box-sizing: border-box;
+
+  border-top: 1px solid $brown;
+  border-bottom: 1px solid $brown;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.filter__form {
+  margin-left: 5px;
+}
+
+.filter__link {
+  color: $brown;
+  transition-duration: 0.3s;
+
+  &--active {
+    color: $red;
+  }
+
+  &:hover,
+  &:focus {
+    color: $dark;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
+
+.filter__button-show {
+  display: none;
+
+  border: none;
+  background-color: transparent;
+  color: $red;
+
+  cursor: pointer;
+}
+
+.filter__layout-grid {
+  position: relative;
+
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-top: 5px;
+  margin-left: 40px;
+
+  background-color: $brown;
+  transition-duration: 0.3s;
+
+  &::before,
+  &::after {
+    content: "";
+    background-color: $brown--lighten;
+  }
+
+  &::before {
+    @include position-abs(50%, 0);
+    width: 100%;
+    height: 1px;
+
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    @include position-abs(0, 50%);
+    height: 100%;
+    width: 1px;
+
+    transform: translateX(-50%);
+  }
+
+  &--active {
+    background-color: $red;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $dark;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
+
+.filter__layout-list {
+  display: inline-block;
+  width: 12px;
+  height: 11px;
+  margin-left: 11px;
+
+  & svg {
+    fill: $brown;
+  }
+
+  &--active svg {
+    fill: $red;
+  }
+
+
+  &:hover svg,
+  &:focus svg {
+    fill: $dark;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}
+
+.filter__container {
+  display: flex;
+  margin-top: -44px;
+  margin-bottom: 64px;
+
+  select {
+    padding-right: 20px;
+    order: 1;
+
+    color: inherit;
+    letter-spacing: 0.04em;
+
+    background-color: inherit;
+    border: none;
+
+    cursor: pointer;
+    appearance: none;
+
+    background-image: url("../img/select.svg");
+    background-repeat: no-repeat;
+    background-position: right 3px top 8px;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+      transition-duration: 0.3s;
+    }
+
+    &:active {
+      opacity: 0.3;
+      transition-duration: 0.3s;
+    }
+  }
+}
+
+.filter__button-reset {
+  position: relative;
+
+  margin-right: 153px;
+
+  color: $red;
+  letter-spacing: 0.04em;
+
+  background-color: transparent;
+  border: none;
+
+  transition-duration: 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $dark;
+    transition-duration: 0.3s;
+
+    &::before,
+    &::after {
+      background-color: $dark;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+
+  &::before,
+  &::after {
+    @include position-abs(0, auto, auto, -10px);
+    content: "";
+
+    width: 1px;
+    height: 100%;
+
+    background-color: $red;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+// range
+
+.filter__range {
+  margin-bottom: 28px;
+  margin-left: 5px;
+}
+
+.filter__range-controle {
+  position: relative;
+
+  padding-top: 18px;
+
+  border-radius: 5px;
+}
+
+.filter__range-scale {
+  height: 1px;
+
+  width: 182px;
+
+  background: $brown;
+}
+
+.filter__range-bar {
+  width: 50%;
+  margin-left: 13%;
+  height: 1.5px;
+
+  background: $brown--dark;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  top: 16px;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: $brown--dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  z-index: 1;
+
+  &--min {
+    left: 23px;
+  }
+
+  &--max {
+    left: 115px;
+  }
+
+  &:active {
+    top: 14px;
+    width: 10px;
+    height: 10px;;
+    transition-duration: 0.3s;
+  }
+}
+
+.filter__range-price {
+  position: relative;
+
+  width: 211px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+
+  &::before {
+    @include position-abs(15px, 86px);
+
+    content: "";
+    width: 10px;
+    height: 1px;
+
+    background-color: $brown--dark;
+  }
+
+  input {
+    width: 76px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 24px;
+
+    border: 1px solid $brown--dark;
+    background-color: transparent;
+
+    color: $brown;
+  }
+}
+
+.filter__range-price label {
+  display: block;
+
+  width: 50%;
+  margin: 0;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}

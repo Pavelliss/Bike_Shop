@@ -124,13 +124,14 @@
     <section class="filter">
       <h2 class="visually-hidden"></h2>
       <div class="filter__block-layout">
+        <button class="filter__button-show" type="button">
+          Фильтры <span class="filter__value">(3)</span>
+        </button>
         <p>
           Показывать по
-          <a class="filter__link filter__link--active" href="#">12</a>&#160;| &#160;
-          <a class="filter__link" href="#">24</a>&#160;| &#160;
-          <a class="filter__link" href="#">Все</a>
+          <a class="filter__link filter__link--active" href="#">&#160;12</a> &#160;| &#160;<a class="filter__link" href="#">24 </a>&#160;|&#160;<a class="filter__link" href="#">Все</a>
         </p>
-        <a class="filter__layout-grid" href="#">
+        <a class="filter__layout-grid filter__layout-grid--active" href="#">
           <span class="visually-hidden">Плиточная раскладка</span>
         </a>
         <a class="filter__layout-list" href="#">
@@ -142,21 +143,29 @@
       </div>
       <div class="filter__form">
         <form method="POST" action="#">
-          <div class="range filter__range">
-            <div class="range__controle">
-              <div class="range__scale">
-                  <div class="range__bar"></div>
-              </div>
-              <div class="range__toggle range__toggle--min"></div>
-              <div class="range__toggle range__toggle--max"></div>
+          <div class="filter__container">
+            <select name="sorting">
+              <option value="popular">По популярности</option>
+              <option value="high-price">Сначала дешевле</option>
+              <option value="low-price">Сначала дешевле</option>
+            </select>
+            <button class="filter__button-reset" type="reset">Сбросить фильтры</button>
           </div>
-          <div class="range__price-controls">
+          <div class="filter__range">
+            <div class="filter__range-price">
               <label>
-                  <input type="text" name="min-value" value="от 0">
+                  <input type="text" name="min-value" value="28 000">
               </label>
               <label>
-                  <input type="text" name="max-value" value="до 5000">
+                  <input type="text" name="max-value" value="180 000">
               </label>
+          </div>
+            <div class="filter__range-controle">
+              <div class="filter__range-scale">
+                  <div class="filter__range-bar"></div>
+              </div>
+              <div class="filter__range-toggle filter__range-toggle--min"></div>
+              <div class="filter__range-toggle filter__range-toggle--max"></div>
           </div>
           </div>
           <fieldset>
@@ -171,6 +180,11 @@
               <span class="filter__element"></span>
               Нет
             </label>
+            <button class="filter__button" type="button">
+              <span class="visually-hidden">
+                Свернуть/развернуть
+              </span>
+            </button>
           </fieldset>
           <fieldset>
             <legend>Производитель</legend>
@@ -305,12 +319,6 @@
               9
             </label>
           </fieldset>
-          <select name="sorting">
-            <option value="popular">По популярности</option>
-            <option value="high-price">Сначала дешевле</option>
-            <option value="low-price">Сначала дешевле</option>
-          </select>
-          <button type="reset">Сбросить фильтры</button>
         </form>
       </div>
     </section>
