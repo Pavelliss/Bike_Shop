@@ -17,7 +17,7 @@
       <a class="header__logo" href="index.html">
         <img src="img/logo--inner.svg" width="184" height="29" alt="Chopper Bikeshop">
       </a>
-      <div class="header__container-nav ">
+      <div class="header__container-nav">
         <button class="header__button" type="button">
           <span class="visually-hidden">Открыть, закрыть меню</span>
         </button>
@@ -102,38 +102,30 @@
       </div>
     </header>
   </div>
-  <main class="main main--catalog">
-    <section class="filter">
-      <h2 class="visually-hidden"></h2>
-      <div class="filter__block-layout">
-        <button class="filter__button-show" type="button">
-          Фильтры <span class="filter__value">(3)</span>
-        </button>
-        <p>
-          Показывать по
-          <a class="filter__link filter__link--active" href="#">&#160;12</a> &#160;| &#160;<a class="filter__link" href="#">24 </a>&#160;|&#160;<a class="filter__link" href="#">Все</a>
-        </p>
-        <a class="filter__layout-grid filter__layout-grid--active" href="#">
-          <span class="visually-hidden">Плиточная раскладка</span>
-        </a>
-        <a class="filter__layout-list" href="#">
-          <svg width="12" height="11">
-            <use xlink:href="#icon-list"></use>
-          </svg>
-          <span class="visually-hidden">Раскладка списком</span>
-        </a>
-      </div>
-      <div class="filter__form">
-        <form method="POST" action="#">
-          <div class="filter__container">
-            <select name="sorting">
-              <option value="popular">По популярности</option>
-              <option value="high-price">Сначала дешевле</option>
-              <option value="low-price">Сначала дешевле</option>
-            </select>
-            <button class="filter__button-reset" type="reset">Сбросить фильтры</button>
-          </div>
-          <div class="filter__range">
+  <main class="main">
+    <div class="main__wrapper">
+      <div class="main__container">
+        <div class="filter main__filter">
+          <button class="filter__button-show" type="button">
+            Фильтры <span class="filter__value">(3)</span>
+          </button>
+          <form method="POST" action="#">
+            <div class="filter__container">
+              <select name="sorting">
+                <option value="popular">По популярности</option>
+                <option value="high-price">Сначала дешевле</option>
+                <option value="low-price">Сначала дешевле</option>
+              </select>
+              <div class="filter__button-container">
+                <button class="filter__button-reset" type="reset">
+                  Сбросить фильтры <span class="filter__value">(3)</span>
+                </button>
+                <button class="filter__button-close" type="button">
+                  <span class="visually-hidden">Закрыть фильтр</span>
+                </button>
+              </div>
+            </div>
+            <div class="filter__range">
             <div class="filter__range-price">
               <label>
                   <input type="text" name="min-value" value="28 000">
@@ -141,169 +133,534 @@
               <label>
                   <input type="text" name="max-value" value="180 000">
               </label>
-          </div>
+            </div>
             <div class="filter__range-controle">
               <div class="filter__range-scale">
                   <div class="filter__range-bar"></div>
               </div>
               <div class="filter__range-toggle filter__range-toggle--min"></div>
               <div class="filter__range-toggle filter__range-toggle--max"></div>
+            </div>
+            </div>
+            <div class="filter__container-form filter__container-form--active">
+            <fieldset>
+              <legend>Электровелосипед</legend>
+              <label>
+                <input type="radio" name="electro-bike" value="yes">
+                <span class="filter__element"></span>
+                Да
+              </label>
+              <label>
+                <input type="radio" name="electro-bike" value="no">
+                <span class="filter__element"></span>
+                Нет
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form">
+            <fieldset>
+              <legend>Производитель</legend>
+              <label>
+                <input type="checkbox" name="neuser_chopper_apocalypse">
+                <span class="filter__element"></span>
+                Neuser Chopper Apocalypse
+              </label>
+              <label>
+                <input type="checkbox" name="schwinn_stingray_occ">
+                <span class="filter__element"></span>
+                Schwinn Stingray OCC
+              </label>
+              <label>
+                <input type="checkbox" name="harley_davidson">
+                <span class="filter__element"></span>
+                Harley Davidson
+              </label>
+              <label>
+                <input type="checkbox" name="micargi_cyclone_electric">
+                <span class="filter__element"></span>
+                Micargi Cyclone electric
+              </label>
+              <label>
+                <input type="checkbox" name="x-front_showmobile">
+                <span class="filter__element"></span>
+                X-Front Showmobile
+              </label>
+              <label>
+                <input type="checkbox" name="2fast4you_chopper">
+                <span class="filter__element"></span>
+                2fast4you chopper
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form filter__container-form--active">
+            <fieldset>
+              <legend>Материал рамы</legend>
+              <label>
+                <input type="checkbox" name="steel" checked>
+                <span class="filter__element"></span>
+                Сталь
+              </label>
+              <label>
+                <input type="checkbox" name="carbon">
+                <span class="filter__element"></span>
+                Карбон
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form filter__container-form--active">
+            <fieldset>
+              <legend>Цвет</legend>
+              <label>
+                <input type="checkbox" name="black">
+                <span class="filter__element"></span>
+                Черный
+              </label>
+              <label>
+                <input type="checkbox" name="brown">
+                <span class="filter__element"></span>
+                Коричневый
+              </label>
+              <label>
+                <input type="checkbox" name="red">
+                <span class="filter__element"></span>
+                Красный
+              </label>
+              <label>
+                <input type="checkbox" name="blue">
+                <span class="filter__element"></span>
+                Голубой
+              </label>
+              <label>
+                <input type="checkbox" name="khaki">
+                <span class="filter__element"></span>
+                Хаки
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form ">
+            <fieldset>
+              <legend>Размер</legend>
+              <label>
+                <input type="checkbox" name="53">
+                <span class="filter__element"></span>
+                53
+              </label>
+              <label>
+                <input type="checkbox" name="56">
+                <span class="filter__element"></span>
+                56
+              </label>
+              <label>
+                <input type="checkbox" name="59">
+                <span class="filter__element"></span>
+                59
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form filter__container-form--active">
+            <fieldset>
+              <legend>Колеса</legend>
+              <label>
+                <input type="checkbox" name="20">
+                <span class="filter__element"></span>
+                20
+              </label>
+              <label>
+                <input type="checkbox" name="22">
+                <span class="filter__element"></span>
+                22
+              </label>
+              <label>
+                <input type="checkbox" name="24">
+                <span class="filter__element"></span>
+                24
+              </label>
+              <label>
+                <input type="checkbox" name="26">
+                <span class="filter__element"></span>
+                26
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+            <div class="filter__container-form">
+            <fieldset>
+              <legend>Кол-во скоростей</legend>
+              <label>
+                <input type="checkbox" name="3">
+                <span class="filter__element"></span>
+                3
+              </label>
+              <label>
+                <input type="checkbox" name="6">
+                <span class="filter__element"></span>
+                6
+              </label>
+              <label>
+                <input type="checkbox" name="9">
+                <span class="filter__element"></span>
+                9
+              </label>
+              <button class="filter__button" type="button">
+                <span class="visually-hidden">
+                  Свернуть/развернуть
+                </span>
+              </button>
+            </fieldset>
+            </div>
+          </form>
+        </div>
+        <div class="catalog">
+          <div class="catalog__block-layout">
+            <p>
+              Показывать по
+              <a class="catalog__link catalog__link--active" href="#">&#160;12</a> &#160;| &#160;<a class="catalog__link" href="#">24 </a>&#160;|&#160;<a class="catalog__link" href="#">Все</a>
+            </p>
+            <a class="catalog__layout-grid catalog__layout-grid--active" href="#">
+              <span class="visually-hidden">Плиточная раскладка</span>
+            </a>
+            <a class="catalog__layout-list" href="#">
+              <svg width="12" height="11">
+                <use xlink:href="#icon-list"></use>
+              </svg>
+              <span class="visually-hidden">Раскладка списком</span>
+            </a>
           </div>
-          </div>
-          <fieldset>
-            <legend>Электровелосипед</legend>
-            <label>
-              <input type="radio" name="electro-bike" value="yes">
-              <span class="filter__element"></span>
-              Да
-            </label>
-            <label>
-              <input type="radio" name="electro-bike" value="no">
-              <span class="filter__element"></span>
-              Нет
-            </label>
-            <button class="filter__button" type="button">
-              <span class="visually-hidden">
-                Свернуть/развернуть
-              </span>
-            </button>
-          </fieldset>
-          <fieldset>
-            <legend>Производитель</legend>
-            <label>
-              <input type="checkbox" name="neuser_chopper_apocalypse">
-              <span class="filter__element"></span>
-              Neuser Chopper Apocalypse
-            </label>
-            <label>
-              <input type="checkbox" name="schwinn_stingray_occ">
-              <span class="filter__element"></span>
-              Schwinn Stingray OCC
-            </label>
-            <label>
-              <input type="checkbox" name="harley_davidson">
-              <span class="filter__element"></span>
-              Harley Davidson
-            </label>
-            <label>
-              <input type="checkbox" name="micargi_cyclone_electric">
-              <span class="filter__element"></span>
-              Micargi Cyclone electric
-            </label>
-            <label>
-              <input type="checkbox" name="x-front_showmobile">
-              <span class="filter__element"></span>
-              X-Front Showmobile
-            </label>
-            <label>
-              <input type="checkbox" name="2fast4you_chopper">
-              <span class="filter__element"></span>
-              2fast4you chopper
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Материал рамы</legend>
-            <label>
-              <input type="checkbox" name="steel">
-              <span class="filter__element"></span>
-              Сталь
-            </label>
-            <label>
-              <input type="checkbox" name="carbon">
-              <span class="filter__element"></span>
-              Карбон
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Цвет</legend>
-            <label>
-              <input type="checkbox" name="black">
-              <span class="filter__element"></span>
-              Черный
-            </label>
-            <label>
-              <input type="checkbox" name="brown">
-              <span class="filter__element"></span>
-              Коричневый
-            </label>
-            <label>
-              <input type="checkbox" name="red">
-              <span class="filter__element"></span>
-              Красный
-            </label>
-            <label>
-              <input type="checkbox" name="blue">
-              <span class="filter__element"></span>
-              Голубой
-            </label>
-            <label>
-              <input type="checkbox" name="khaki">
-              <span class="filter__element"></span>
-              Хаки
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Размер</legend>
-            <label>
-              <input type="checkbox" name="53">
-              <span class="filter__element"></span>
-              53
-            </label>
-            <label>
-              <input type="checkbox" name="56">
-              <span class="filter__element"></span>
-              56
-            </label>
-            <label>
-              <input type="checkbox" name="59">
-              <span class="filter__element"></span>
-              59
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Колеса</legend>
-            <label>
-              <input type="checkbox" name="20">
-              <span class="filter__element"></span>
-              20
-            </label>
-            <label>
-              <input type="checkbox" name="22">
-              <span class="filter__element"></span>
-              22
-            </label>
-            <label>
-              <input type="checkbox" name="24">
-              <span class="filter__element"></span>
-              24
-            </label>
-            <label>
-              <input type="checkbox" name="26">
-              <span class="filter__element"></span>
-              26
-            </label>
-          </fieldset>
-          <fieldset>
-            <legend>Кол-во скоростей</legend>
-            <label>
-              <input type="checkbox" name="3">
-              <span class="filter__element"></span>
-              3
-            </label>
-            <label>
-              <input type="checkbox" name="6">
-              <span class="filter__element"></span>
-              6
-            </label>
-            <label>
-              <input type="checkbox" name="9">
-              <span class="filter__element"></span>
-              9
-            </label>
-          </fieldset>
-        </form>
+          <ul class="catalog__list">
+            <li class="catalog__item">
+              <div class="catalog__image">
+                <picture>
+                  <source type="image/webp"  srcset="img/neuzer@1x.webp 1x, img/neuzer@2x.webp 2x">
+                  <!--1x: 283px; 2x: 566px-->
+                  <img src="img/neuzer@1x.jpg" srcset="img/neuzer@2x.jpg 2x" width="283" height="240" alt="Neuzer Chopper Apocalypse">
+                </picture>
+              </div>
+              <a class="catalog__bookmark" href="#">
+                <svg width="24" height="12">
+                  <use xlink:href="#icon-bookmarks"></use>
+                </svg>
+                <span class="visually-hidden">Добавить в закладки</span>
+              </a>
+              <a href="#" class="catalog__basket">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+              <b class="catalog__brand">Neuzer Chopper Apocalypse</b>
+              <span class="catalog__info">24'', сталь Hi-Ten</span>
+              <span class="catalog__info">Венгрия</span>
+              <span class="catalog__price">75 000 ₽</span>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__image">
+                <picture>
+                  <source type="image/webp"  srcset="img/schwinn@1x.webp 1x, img/schwinn@2x.webp 2x">
+                  <!--1x: 262px; 2x: 524px-->
+                  <img src="img/schwinn@1x.jpg" srcset="img/schwinn@2x.jpg 2x" width="283" height="240" alt="Schwinn Stingray OCC">
+                </picture>
+              </div>
+              <a class="catalog__bookmark" href="#">
+                <svg width="24" height="12">
+                  <use xlink:href="#icon-bookmarks"></use>
+                </svg>
+                <span class="visually-hidden">Добавить в закладки</span>
+              </a>
+              <a href="#" class="catalog__basket">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+              <b class="catalog__brand">Schwinn Stingray OCC</b>
+              <span class="catalog__info">20'' + 24'', сталь</span>
+              <span class="catalog__info">США</span>
+              <span class="catalog__price">34 000 ₽</span>
+            </li>
+            <li class="catalog__item">
+              <div class="catalog__image">
+                <picture>
+                  <source type="image/webp"  srcset="img/harley@1x.webp 1x, img/harley@2x.webp 2x">
+                  <!--1x: 266px; 2x: 532px-->
+                  <img src="img/harley@1x.jpg" srcset="img/harley@2x.jpg 2x" width="283" height="240" alt="Harley Davidson">
+                </picture>
+              </div>
+              <a class="catalog__bookmark" href="#">
+                <svg width="24" height="12">
+                  <use xlink:href="#icon-bookmarks"></use>
+                </svg>
+                <span class="visually-hidden">Добавить в закладки</span>
+              </a>
+              <a href="#" class="catalog__basket">
+                <span class="visually-hidden">В корзину</span>
+              </a>
+              <b class="catalog__brand">Harley Davidson</b>
+              <span class="catalog__info">20'', сталь</span>
+              <span class="catalog__info">Китай</span>
+              <span class="catalog__price">23 000 ₽</span>
+            </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/micargi@1x.webp 1x, img/micargi@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/micargi@1x.jpg" srcset="img/micargi@2x.jpg 2x" width="283" height="240" alt="Micargi Cyclone electric">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">Micargi Cyclone electric</b>
+            <span class="catalog__info">26'',500W, 5 скоростей, сталь</span>
+            <span class="catalog__info">США</span>
+            <span class="catalog__price">154 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/x-from@1x.webp 1x, img/x-from@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/x-from@1x.jpg" srcset="img/x-from@2x.jpg 2x" width="283" height="240" alt="X-Front Showmobile">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">X-Front Showmobile</b>
+            <span class="catalog__info">24'', сталь</span>
+            <span class="catalog__info">Китай</span>
+            <span class="catalog__price">42 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/fast-chopper@1x.webp 1x, img/fast-chopper@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/fast-chopper@1x.jpg" srcset="img/fast-chopper@2x.jpg 2x" width="283" height="240" alt="2fast4you chopper">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">2fast4you chopper</b>
+            <span class="catalog__info">24'', сталь</span>
+            <span class="catalog__info">Венгрия</span>
+            <span class="catalog__price">38 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/neuzer--2@1x.webp 1x, img/neuzer--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/neuzer--2@1x.jpg" srcset="img/neuzer--2@2x.jpg 2x" width="283" height="240" alt="Neuser Chopper Apocalypse">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">Neuser Chopper Apocalypse</b>
+            <span class="catalog__info">24'', сталь Hi-Ten</span>
+            <span class="catalog__info">Венгрия</span>
+            <span class="catalog__price">75 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/schwinn--2@1x.webp 1x, img/schwinn--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/schwinn--2@1x.jpg" srcset="img/schwinn--2@2x.jpg 2x" width="283" height="240" alt="Schwinn Stingray OCC">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">Schwinn Stingray OCC</b>
+            <span class="catalog__info">20''+24'', сталь</span>
+            <span class="catalog__info">США</span>
+            <span class="catalog__price">34 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/harley--2@1x.webp 1x, img/harley--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/harley--2@1x.jpg" srcset="img/harley--2@2x.jpg 2x" width="283" height="240" alt="Harley Davidson">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">Harley Davidson</b>
+            <span class="catalog__info">20'', сталь</span>
+            <span class="catalog__info">Китай</span>
+            <span class="catalog__price">23 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/micargi--2@1x.webp 1x, img/micargi--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/micargi--2@1x.jpg" srcset="img/micargi--2@2x.jpg 2x" width="283" height="240" alt="Micargi Cyclone electric">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">Micargi Cyclone electric</b>
+            <span class="catalog__info">26'',500W, 5 скоростей, сталь</span>
+            <span class="catalog__info">США</span>
+            <span class="catalog__price">154 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/x-from--2@1x.webp 1x, img/x-from--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/x-from--2@1x.jpg" srcset="img/x-from--2@2x.jpg 2x" width="283" height="240" alt="X-Front Showmobile">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">X-Front Showmobile</b>
+            <span class="catalog__info">24'', сталь</span>
+            <span class="catalog__info">Китай</span>
+            <span class="catalog__price">42 000 ₽</span>
+          </li>
+          <li class="catalog__item">
+            <div class="catalog__image">
+              <picture>
+                <source type="image/webp"  srcset="img/x-from--2@1x.webp 1x, img/x-from--2@2x.webp 2x">
+                <!--1x: 266px; 2x: 532px-->
+                <img src="img/x-from--2@1x.jpg" srcset="img/x-from--2@2x.jpg 2x" width="283" height="240" alt="2fast4you chopper">
+              </picture>
+            </div>
+            <a class="catalog__bookmark" href="#">
+              <svg width="24" height="12">
+                <use xlink:href="#icon-bookmarks"></use>
+              </svg>
+              <span class="visually-hidden">Добавить в закладки</span>
+            </a>
+            <a href="#" class="catalog__basket">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+            <b class="catalog__brand">2fast4you chopper</b>
+            <span class="catalog__info">24'', сталь</span>
+            <span class="catalog__info">Венгрия</span>
+            <span class="catalog__price">38 000 ₽</span>
+          </li>
+          </ul>
+        </div>
       </div>
-    </section>
+      <div class="pagination">
+        <a class="pagination__link pagination__link--back" href="#">
+          <svg width="12" height=6>
+            <use xlink:href ="#icon-arrow--mini"></use>
+          </svg>
+          <span class="visually-hidden">Назад</span>
+        </a>
+        <ul class="pagination__list">
+          <li class="pagination__item pagination__item--active">
+            <a href="#">1</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination__item">
+            ...
+          </li>
+          <li class="pagination__item pagination__item--hidden">
+            <a href="#">24</a>
+          </li>
+          <li class="pagination__item pagination__item--hidden">
+            <a href="#">25</a>
+          </li>
+          <li class="pagination__item">
+            <a href="#">26</a>
+          </li>
+        </ul>
+        <a class="pagination__link pagination__link--next" href="#">
+          <span class="visually-hidden">Вперёд</span>
+          <svg width="12" height=6>
+            <use xlink:href ="#icon-arrow--mini"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
   </main>
   <footer class="footer footer--inner">
     <div class="footer__container">

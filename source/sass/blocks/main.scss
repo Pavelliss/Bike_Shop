@@ -1,4 +1,61 @@
 .main {
   min-height: 1000px;
   background-color: $brown--lighten;
+
+  .filter__form {
+    margin-right: 3.2%;
+  }
+}
+
+.main__wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 42px;
+
+  font-family: $hagin;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  color: $brown;
+}
+
+.main__container {
+  position: relative;
+
+  width: 100%;
+  display: flex;
+  margin-bottom: 77px;
+
+  &::before,
+  &::after {
+    @include position-abs(0, 0);
+    content: "";
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $brown--dark;
+  }
+
+  &::after {
+    top: 58px;
+  }
+}
+
+.main__filter {
+  margin-right: 3.2%;
+}
+
+@media (max-width: 640px) {
+  .main__wrapper {
+    padding: 0 15px;
+  }
+
+  .main__container {
+    margin-bottom: 44px;
+
+    &::after {
+      top: 36px;
+    }
+  }
 }
