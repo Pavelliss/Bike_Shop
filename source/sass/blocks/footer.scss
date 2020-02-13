@@ -1,6 +1,5 @@
 .footer {
-  min-height: 777px;
-  padding-bottom: 20px;
+  padding-bottom: 38px;
   box-sizing: border-box;
 
   font-family: $hagin;
@@ -15,37 +14,35 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/workshop-bg@2x.jpg");
   }
+}
 
-  &--inner {
-    min-height: 172px;
+.footer--inner {
+  background-image: none;
+  background-color: $brown--lighten;
 
-    background-image: none;
-    background-color: $brown--lighten;
+  .footer__nav a:hover,
+  .footer__nav a:focus {
+    opacity: 1;
+    color: $dark;
+  }
 
-    .nav__item a:hover,
-    .nav__item a:focus {
-      opacity: 1;
-      color: $dark;
+  .footer__container {
+    margin-top: 0;
+  }
+
+  .footer__nav a:active {
+    opacity: 0.3;
+  }
+
+  .footer__container-social {
+    svg {
+      fill: $brown;
     }
 
-    .footer__container {
-      margin-top: 0;
-    }
-
-    .nav__item a:active {
-      opacity: 0.3;
-    }
-
-    .footer__container-social {
-      svg {
-        fill: $brown;
-      }
-
-      a:hover svg,
-      a:focus svg {
-        fill: $red;
-        transition-duration: 0.3s;
-      }
+    a:hover svg,
+    a:focus svg {
+      fill: $red;
+      transition-duration: 0.3s;
     }
   }
 }

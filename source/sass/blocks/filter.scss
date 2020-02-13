@@ -4,7 +4,6 @@
   fieldset {
     padding: 0;
     padding-left: 2px;
-    padding-bottom: 9px;
 
     display: flex;
     border: none;
@@ -63,37 +62,13 @@
   display: flex;
   margin-top: 20px;
   margin-bottom: 64px;
+}
 
-  select {
-    position: absolute;
-    left: 312px;
-    padding-right: 20px;
-    order: 1;
-
-    color: inherit;
-    letter-spacing: 0.04em;
-
-    background-color: inherit;
-    border: none;
-
-    cursor: pointer;
-    appearance: none;
-
-    background-image: url("../img/arrow-select.svg");
-    background-repeat: no-repeat;
-    background-position: right 3px top 8px;
-
-    &:hover,
-    &:focus {
-      color: $dark;
-      transition-duration: 0.3s;
-    }
-
-    &:active {
-      opacity: 0.3;
-      transition-duration: 0.3s;
-    }
-  }
+.filter__select {
+  position: absolute;
+  left: 312px;
+  padding-right: 20px;
+  order: 1;
 }
 
 .filter__button-reset {
@@ -181,6 +156,19 @@
   &:last-child fieldset {
     border: none;
   }
+
+  &--manufacturer {
+    fieldset {
+      margin-top: -5px;
+      padding-bottom: 5px;
+    }
+  }
+
+  &--size {
+    fieldset {
+      padding-bottom: 10px;
+    }
+  }
 }
 
 .filter__element {
@@ -207,10 +195,11 @@
 }
 
 .filter__button {
-  @include position-abs (17px, auto, auto, 23px);
+  padding: 0;
+  width: 100%;
 
-  width: 14px;
-  height: 14px;
+  color: $brown--dark;
+  letter-spacing: 0.04em;
 
   border: none;
   background-color: transparent;
@@ -219,11 +208,8 @@
 
   &::before,
   &::after {
+    @include position-abs(24px, auto, auto, 23px);
     content: "";
-
-    position: absolute;
-    top: 7px;
-    left: 0;
 
     width: 14px;
     height: 1px;
@@ -237,15 +223,17 @@
 
   &:hover,
   &:focus {
-    opacity: 0.6;
+    color: $dark;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
 .filter__button-close {
   display: none;
 }
-
-// range
 
 .filter__range {
   margin-bottom: 17px;
@@ -254,105 +242,6 @@
   label {
     padding: 0;
   }
-}
-
-.filter__range-controle {
-  position: relative;
-
-  padding-top: 18px;
-
-  border-radius: 5px;
-}
-
-.filter__range-scale {
-  height: 1px;
-
-  width: 182px;
-
-  background: $brown;
-}
-
-.filter__range-bar {
-  width: 50%;
-  margin-left: 13%;
-  height: 1.5px;
-
-  background: $brown--dark;
-}
-
-.filter__range-toggle {
-  position: absolute;
-  top: 16px;
-
-  width: 6px;
-  height: 6px;
-
-  background-color: $brown--dark;
-  border-radius: 50%;
-  cursor: pointer;
-  transition-duration: 0.3s;
-
-  z-index: 1;
-
-  &--min {
-    left: 23px;
-  }
-
-  &--max {
-    left: 115px;
-  }
-
-  &:active {
-    top: 14px;
-    width: 10px;
-    height: 10px;
-    transition-duration: 0.3s;
-  }
-}
-
-.filter__range-price {
-  position: relative;
-
-  width: 211px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 0;
-
-  &::before {
-    @include position-abs(15px, 86px);
-
-    content: "";
-    width: 10px;
-    height: 1px;
-
-    background-color: $brown--dark;
-  }
-
-  input {
-    width: 76px;
-    padding-left: 10px;
-    padding-bottom: 3px;
-    box-sizing: border-box;
-
-    font-family: $roboto;
-    font-size: 14px;
-    line-height: 24px;
-
-    border: 1px solid $brown--dark;
-    background-color: transparent;
-
-    color: $brown;
-  }
-}
-
-.filter__range-price label {
-  display: block;
-
-  width: 50%;
-  margin: 0;
-
-  font-size: 16px;
-  text-transform: uppercase;
 }
 
 @media (max-width: 640px) {

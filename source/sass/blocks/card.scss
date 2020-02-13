@@ -1,0 +1,301 @@
+.card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding-left: 40.5%;
+  margin-bottom: 165px;
+
+  color: $brown--dark;
+
+  h1 {
+    margin: 0;
+    margin-bottom: 10px;
+
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+
+  b {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: normal;
+    color: $red;
+  }
+
+  em {
+    margin-bottom: 42px;
+
+    font-style: initial;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    font-family: $roboto;
+    color: $red;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 30%;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.2px;
+    font-family: $roboto;
+  }
+}
+
+.card__br--mobile {
+  display: none;
+}
+
+.card__image {
+  @include position-abs(13px, -91px);
+  width: 43%;
+
+  img {
+    mix-blend-mode: multiply;
+  }
+
+  &::before {
+    @include position-abs(-4px, 18%);
+    content: "";
+
+    width: 66%;
+    height: 110%;
+
+    border: 5px solid #ffffff;
+  }
+}
+
+.card__button {
+  width: 38.5%;
+  min-width: 196px;
+
+  color: #ffffff;
+  background-color: $red;
+  border: none;
+
+  & svg {
+    fill: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: $red;
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__bookmark {
+  top: auto;
+  bottom: -5%;
+  right: 17.2%;
+}
+
+.card__container-colors {
+  @include position-abs(auto, 45.4%, 1.6%);
+}
+
+.card__color {
+  position: relative;
+
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
+  border-radius: 50%;
+  border: none;
+
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  &--black {
+    background-color: #333232;
+  }
+
+  &--brown {
+    background-color: #7e5b48;
+  }
+
+  &--beige {
+    background-color: #d5b688;
+  }
+
+  &--active::before {
+    @include position-abs(-26.6%, -28%);
+    content: "";
+
+    width: 24px;
+    height: 24px;
+
+    border: 2px solid $brown;
+    border-radius: 50%;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.card__zoom {
+  @include position-abs(auto, 47.2%, -18%);
+  width: 10%;
+  height: 13%;
+
+  background-color: $brown--dark;
+  background-image: url("../img/zoom.svg");
+
+  background-position: 53% 49%;
+  background-repeat: no-repeat;
+  background-size: 26px;
+  border: none;
+
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .card {
+    padding-left: 50%;
+
+    h1 {
+      font-size: 40px;
+    }
+
+    b {
+      font-size: 40px;
+    }
+
+    p {
+      padding-right: 10%;
+      font-size: 18px;
+    }
+  }
+
+  .card__image {
+    left: 0;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .card {
+    margin-bottom: 30px;
+    padding-left: 0;
+
+    h1 {
+      font-size: 28px;
+      line-height: 56px;
+      text-align: center;
+    }
+
+    b {
+      font-size: 28px;
+      line-height: 22px;
+      text-align: center;
+      margin-bottom: 33px;
+    }
+
+    p {
+      padding: 0;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+
+      order: 2;
+    }
+
+    em {
+      order: 3;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .card__br {
+    display: none;
+
+    &--mobile {
+      display: inline;
+    }
+  }
+
+  .card__image {
+    position: relative;
+
+    width: 100%;
+    margin-bottom: 20.5%;
+
+    &::before {
+      top: -16px;
+      left: 9%;
+
+      width: 79%;
+      height: 126%;
+    }
+  }
+
+  .card__assessment {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: -13px;
+
+    span {
+      margin-right: auto;
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    ul {
+      margin-left: auto;
+    }
+  }
+
+  .card__container-colors {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    left: 37.4%;
+    bottom: -5.4%;
+  }
+
+  .card__zoom {
+    left: 41.2%;
+    bottom: -36%;
+
+    width: 17%;
+    height: 24%;
+  }
+
+  .card__button {
+    margin: 0 auto;
+    margin-top: 21%;
+    margin-bottom: 30px;
+    min-height: 51px;
+
+    line-height: 51px;
+  }
+}

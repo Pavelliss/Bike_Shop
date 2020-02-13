@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Седло Brooks B67</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div style="display: none;">
+    <include src="build/img/sprite_auto.svg"></include>
+  </div>
+  <div class="header header--inner header--card">
+    <header class="header__page">
+      <a class="header__logo" href="main.html">
+        <img src="img/logo--inner.svg" width="184" height="29" alt="Chopper Bikeshop">
+      </a>
+      <div class="header__container-nav">
+        <button class="header__button" type="button">
+          <span class="visually-hidden">Открыть, закрыть меню</span>
+        </button>
+        <nav class="nav header__nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="catalog.html">Велосипеды</a>
+            </li>
+            <li class="nav__item nav__item--active">
+              <a href="#">Аксессуары</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Запчасти</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Мастерская</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__container-mobile">
+          <div class="basket header__basket">
+            <a class="basket__link" href="#">
+              Корзина (<span class="basket__value">1</span>)
+            </a>
+          </div>
+          <div class="form-search header__form-search">
+            <form method="GET" action="#">
+              <label>
+                <span class="visually-hidden">Поиск</span>
+                <input type="search" placeholder="Поиск">
+                <svg width="16" height="16">
+                  <use xlink:href="#icon-search"></use>
+                </svg>
+              </label>
+            </form>
+          </div>
+        </div>
+        <div class="user user--authorized header__user">
+          <a class="user__login" href="#">
+            <span class="visually-hidden">Войти под своим именим</span>
+            <img src="img/user.svg" width="12" height="14" alt="войти">
+          </a>
+          <span class="user__name">Михаил Иванов</span>
+          <a class="user__logout" href="#">
+            <img src="img/logout.svg" width="16" height="18" alt="выйти">
+          </a>
+        </div>
+      </div>
+      <div class="header__links">
+        <a class="header__link header__link--hidden" href="#">
+          <svg width="18" height="20">
+            <use xlink:href="#icon-user"></use>
+          </svg>
+          <span class="visually-hidden">Войти под своим именим</span>
+        </a>
+        <a class="header__link header__link--hidden" href="#">
+          <svg width="18" height="18">
+            <use xlink:href="#icon-search"></use>
+          </svg>
+          <span class="visually-hidden">Поиск</span>
+        </a>
+        <a class="header__link header__link--basket" href="#">
+          <svg width="21" height="19">
+            <use xlink:href="#icon-basket"></use>
+          </svg>
+          <span class="visually-hidden">Корзина</span>
+          <b class="header__value">1</b>
+        </a>
+        <a class="header__link header__link--bookmarks header__link--active header__link--hidden" href="#">
+          <svg width="28" height="14">
+            <use xlink:href="#icon-bookmarks"></use>
+          </svg>
+          <span class="visually-hidden">Закладки</span>
+          <b class="header__basket-value header__value">3</b>
+        </a>
+      </div>
+    </header>
+  </div>
+  <main class="main main--card">
+    <div class="main__wrapper main__wrapper--card">
+      <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+          <li class="breadcrumbs__item">
+            <a href="#">Аксессуары</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a href="#">Седла</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a>Brooks</a>
+          </li>
+        </ul>
+      </div>
+      <section class="card">
+        <div class="card__container">
+          <h1>Седло Brooks B67</h1>
+          <div class="assessment card__assessment">
+            <ul class="assessment__list">
+              <li class="assessment__item assessment__item--active"></li>
+              <li class="assessment__item assessment__item--active"></li>
+              <li class="assessment__item assessment__item--active"></li>
+              <li class="assessment__item assessment__item--active"></li>
+              <li class="assessment__item"></li>
+            </ul>
+            <span class="assessment__value">(9)</span>
+          </div>
+          <b>7 935&#8381;</b>
+        </div>
+        <div class="card__image">
+          <picture>
+            <source type="image/webp" srcset="img/bike-seat--card@1x.webp 1x, img/bike-seat--card@2x.webp 2x">
+            <!--1x: 290px; 2x: 480px-->
+            <img src="img/bike-seat--card@1x.jpg" srcset="img/bike-seat--card@2x.jpg 2x" width="290" height="212" alt="Седло Brooks B67">
+          </picture>
+          <div class="card__container-colors">
+            <button class="card__color card__color--active card__color--black" type="button">
+              <span class="visually-hidden">Черный цвет</span>
+            </button>
+            <button class="card__color card__color--brown" type="button">
+              <span class="visually-hidden">Коричневый цвет</span>
+            </button>
+            <button class="card__color card__color--beige" type="button">
+              <span class="visually-hidden">Бежевый цвет</span>
+            </button>
+          </div>
+          <button class="card__zoom">
+            <span class="visually-hidden">Увеличить изображение</span>
+          </button>
+          <a class="catalog__bookmark card__bookmark" href="#">
+            <svg width="24" height="12">
+              <use xlink:href="#icon-bookmarks"></use>
+            </svg>
+            <span class="visually-hidden">Добавить в закладки</span>
+          </a>
+        </div>
+        <p>
+          В комплекте ключ для регулировки, газета <br class="card__br">с полезной информацией <br class="card__br card__br card__br--mobile">и рекомендациями по уходу <br class="card__br card__br card__br--mobile">от компании-производителя. Фирменная картонная упаковка.
+        </p>
+        <em>Гарантия 1 год</em>
+        <a class="button card__button">
+          <svg width="21" height="19">
+            <use xlink:href="#icon-basket"></use>
+          </svg>
+          В корзину
+        </a>
+      </section>
+      <section class="prod-info">
+        <h2 class="visually-hidden">Информация о товаре</h2>
+        <ul class="prod-info__list">
+          <li class="prod-info__item">
+            <button class="prod-info__tab prod-info__tab--detail" type="button">Подробное описание</button>
+          </li>
+          <li class="prod-info__item">
+            <button class="prod-info__tab prod-info__tab--warranty" type="button">Условия гарантии</button>
+          </li>
+          <li class="prod-info__item prod-info__item--active">
+            <button class="prod-info__tab prod-info__tab--feedback" type="button">Отзывы</button>
+            <div class="prod-info__container">
+              <div class="prod-info__feedback">
+                <p class="prod-info__user-name">JawPike <span class="prod-info__user-date">18 / 03 / 2018</span></p>
+                <div class="assessment prod-info__assessment">
+                  <ul class="assessment__list">
+                    <li class="assessment__item"></li>
+                    <li class="assessment__item"></li>
+                    <li class="assessment__item"></li>
+                    <li class="assessment__item"></li>
+                    <li class="assessment__item"></li>
+                  </ul>
+                </div>
+                <b class="prod-info__user-title">
+                  Лучшее, что могло придумать человечество
+                </b>
+                <p class="prod-info__user-text">
+                  Это седло заменило мне женщину. Ни о чем не жалею.
+                </p>
+              </div>
+              <a class="button prod-info__button" href="#">Оставить отзыв</a>
+            </div>
+          </li>
+          <li class="prod-info__item">
+            <button class="prod-info__tab prod-info__tab--overview" type="button">Обзоры</button>
+          </li>
+        </ul>
+      </section>
+      <section class="slider slider--accessories">
+        <div class="slider__container">
+          <h2 class="slider__title">
+            C этим товаром смотрят
+          </h2>
+          <div class="slider__container-slider">
+            <div id="slider-accessories" class="swiper-container catalog slider__catalog">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/bag@1x.webp 1x, img/bag@2x.webp 2x">
+                      <!--1x: 196px; 2x: 392px-->
+                      <img src="img/bag@1x.jpg" srcset="img/bag@2x.jpg 2x" width="196" height="240" alt="Сумка на руль B-Soul">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Сумка на руль<br> B-Soul</b>
+                  <span class="catalog__info">15x10 x5 cm</span>
+                  <span class="catalog__info">Натуральная кожа</span>
+                  <span class="catalog__price">3200 ₽</span>
+                </li>
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/grips@1x.webp 1x, img/grips@2x.webp 2x">
+                      <!--1x: 178px; 2x: 356px-->
+                      <img src="img/grips@1x.jpg" srcset="img/grips@2x.jpg 2x" width="178" height="240" alt="Грипсы Propalm">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Грипсы <span>Propalm</span></b>
+                  <span class="catalog__info">Натуральная кожа с фиксатором</span>
+                  <span class="catalog__price">1800 ₽</span>
+                </li>
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/bike-seat@1x.webp 1x, img/bike-seat@2x.webp 2x">
+                      <!--1x: 197px; 2x: 354px-->
+                      <img src="img/bike-seat@1x.jpg" srcset="img/bike-seat@2x.jpg 2x" width="197" height="240" alt="Седло Brooks B66 S">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Седло <span>Brooks B66 S</span></b>
+                  <span class="catalog__info">Натуральная кожа</span>
+                  <span class="catalog__info">Доступно в 3 цветах</span>
+                  <span class="catalog__price">8625 ₽</span>
+                </li>
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/wheel@1x.webp 1x, img/wheel@2x.webp 2x">
+                      <!--1x: 215px; 2x: 430px-->
+                      <img src="img/wheel@1x.jpg" srcset="img/wheel@2x.jpg 2x" width="283" height="215" alt="Колеса Striga 18''">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Колеса <span>Striga 18''</span></b>
+                  <span class="catalog__info">Покрышки Innova</span>
+                  <span class="catalog__info">цена за 2 колеса</span>
+                  <span class="catalog__price">6780 ₽</span>
+                </li>
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/steering-wheel@1x.webp 1x, img/steering-wheel@2x.webp 2x">
+                      <!--1x: 291px; 2x: 582px-->
+                      <img src="img/steering-wheel@1x.jpg" srcset="img/steering-wheel@2x.jpg 2x" width="291" height="240" alt="Руль Lowrider U">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Руль <span>Lowrider U</span></b>
+                  <span class="catalog__info">11'-25.4mm</span>
+                  <span class="catalog__info">хромированная сталь</span>
+                  <span class="catalog__price">2 350 ₽</span>
+                </li>
+                <li class="swiper-slide">
+                  <div class="catalog__image">
+                    <picture>
+                      <source type="image/webp"  srcset="img/pedals@1x.webp 1x, img/pedals@2x.webp 2x">
+                      <!--1x: 189px; 2x: 378px-->
+                      <img src="img/pedals@1x.jpg" srcset="img/pedals@2x.jpg 2x" width="189" height="240" alt="Педали Bikein Pro">
+                    </picture>
+                  </div>
+                  <a class="catalog__bookmark" href="#">
+                    <span class="visually-hidden">Добавить в закладки</span>
+                  </a>
+                  <a href="#" class="catalog__basket">
+                    <span class="visually-hidden">В корзину</span>
+                  </a>
+                  <b class="catalog__brand">Педали <span>Bikein Pro</span></b>
+                  <span class="catalog__info">алюминий+ольха</span>
+                  <span class="catalog__info">120х77х30мм, 394 гр</span>
+                  <span class="catalog__price">2 500 ₽</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button class="swiper-button-next slider__button slider__button--next">
+          <span class="visually-hidden">Вперед</span>
+        </button>
+        <button class="swiper-button-prev slider__button slider__button--back">
+          <span class="visually-hidden">Назад</span>
+        </button>
+      </section>
+    </div>
+  </main>
+  <footer class="footer footer--inner">
+    <div class="footer__container">
+      <nav class="nav nav--footer footer__nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--active">
+            <a href="catalog.html">Велосипеды</a>
+          </li>
+          <li class="nav__item nav__item--active">
+            <a href="#">Аксессуары</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Запчасти</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Мастерская</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Тест-драйв</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Рассрочка</a>
+          </li>
+          <li class="nav__item">
+            <a href="#">Вступление в клуб</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer__container-social">
+        <div class="social footer__social">
+          <ul class="social__list">
+            <li class="social__item social__item--vk">
+              <a href="#">
+                <svg width="21" height="12">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item social__item--fb">
+              <a href="#">
+                <svg width="9" height="18">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+                <span class="visually-hidden">Facebook</span>
+              </a>
+            </li>
+            <li class="social__item social__item--inst">
+              <a href="#">
+                <svg width="17" height="17">
+                  <use xlink:href="#icon-inst"></use>
+                </svg>
+                <span class="visually-hidden">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <img src="img/logo--inner.svg" width="184" height="29" alt="logo">
+        <b class="footer__copyright">
+          <span class="footer__span">©2018 &#160;| &#160;</span>Политика конфиденциальности<br><span class="footer__span footer__span--mobile">&#160;©2018</span>
+        </b>
+      </div>
+    </div>
+  </footer>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

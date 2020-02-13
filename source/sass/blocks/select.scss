@@ -1,0 +1,25 @@
+.select {
+  color: inherit;
+  letter-spacing: 0.04em;
+
+  background-color: inherit;
+  border: none;
+
+  cursor: pointer;
+  appearance: none;
+
+  background-image: url("../img/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-position: right 3px top 8px;
+
+  &:hover,
+  &:focus {
+    color: $dark;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition-duration: 0.3s;
+  }
+}

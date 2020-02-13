@@ -1,0 +1,99 @@
+
+.range__controle {
+  position: relative;
+
+  padding-top: 18px;
+
+  border-radius: 5px;
+}
+
+.range__scale {
+  height: 1px;
+
+  width: 182px;
+
+  background: $brown;
+}
+
+.range__bar {
+  width: 50%;
+  margin-left: 13%;
+  height: 1.5px;
+
+  background: $brown--dark;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 16px;
+
+  width: 6px;
+  height: 6px;
+
+  background-color: $brown--dark;
+  border-radius: 50%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+
+  z-index: 1;
+
+  &--min {
+    left: 23px;
+  }
+
+  &--max {
+    left: 115px;
+  }
+
+  &:active {
+    top: 14px;
+    width: 10px;
+    height: 10px;
+    transition-duration: 0.3s;
+  }
+}
+
+.range__price {
+  position: relative;
+
+  width: 211px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0;
+
+  &::before {
+    @include position-abs(15px, 86px);
+
+    content: "";
+    width: 10px;
+    height: 1px;
+
+    background-color: $brown--dark;
+  }
+
+  input {
+    width: 76px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    box-sizing: border-box;
+
+    font-family: $roboto;
+    font-size: 14px;
+    line-height: 24px;
+
+    border: 1px solid $brown--dark;
+    background-color: transparent;
+
+    color: $brown;
+  }
+
+  label {
+    display: block;
+
+    width: 50%;
+    margin: 0;
+
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+}

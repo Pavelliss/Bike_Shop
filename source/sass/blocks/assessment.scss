@@ -1,0 +1,37 @@
+.assessment {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.assessment__list {
+  @include list-reset;
+  display: flex;
+  width: 145px;
+  height: 30px;
+}
+
+.assessment__item {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+
+  background-image: url("../img/star.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
+
+.assessment__value {
+  display: block;
+  margin-top: -5px;
+
+  font-family: $roboto;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 0.2px;
+}

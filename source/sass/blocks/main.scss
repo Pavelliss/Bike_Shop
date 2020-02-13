@@ -1,9 +1,13 @@
 .main {
-  min-height: 1000px;
   background-color: $brown--lighten;
 
   .filter__form {
     margin-right: 3.2%;
+  }
+
+  &--card {
+    padding-top: 44px;
+    border-top: 1px solid $brown;
   }
 }
 
@@ -17,6 +21,10 @@
   line-height: 18px;
   letter-spacing: 0.04em;
   color: $brown;
+
+  &--card {
+    padding-left: 123px;
+  }
 }
 
 .main__container {
@@ -46,6 +54,13 @@
   margin-right: 3.2%;
 }
 
+@media (max-width: $tablet-width) {
+  .main__wrapper--card {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 @media (max-width: 640px) {
   .main__wrapper {
     padding: 0 15px;
@@ -57,5 +72,12 @@
     &::after {
       top: 36px;
     }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .main--card {
+    padding-top: 0;
+    border: none;
   }
 }

@@ -15,42 +15,48 @@
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/main-image-desktop@2x.jpg");
   }
+}
 
-  &--inner {
-    min-height: 103px;
+.header--inner {
+  min-height: 103px;
 
-    background-color: $brown--lighten;
-    background-image: none;
+  background-color: $brown--lighten;
+  background-image: none;
 
-    .header__link svg {
-      &:hover,
-      &:focus {
-        opacity: 1;
-        fill: $red;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-    }
-
-    .nav__item a:hover,
-    .nav__item a:focus {
+  .header__link svg {
+    &:hover,
+    &:focus {
       opacity: 1;
-      color: $dark;
+      fill: $red;
     }
 
-    .nav__item a:active {
+    &:active {
       opacity: 0.3;
     }
+  }
 
-    .header__value {
-      color: $red;
-    }
+  .header__nav a:hover,
+  .header__nav a:focus {
+    opacity: 1;
+    color: $dark;
+  }
 
-    .header__page {
-      padding-top: 42px;
-    }
+  .header__nav a:active {
+    opacity: 0.3;
+  }
+
+  .header__value {
+    color: $red;
+  }
+
+  .header__page {
+    padding-top: 42px;
+  }
+}
+
+.header--card {
+  .header__logo {
+    margin-right: 7%;
   }
 }
 
@@ -93,6 +99,10 @@
 
   &--bookmarks {
     display: none;
+  }
+
+  &--active {
+    display: block;
   }
 
   svg {

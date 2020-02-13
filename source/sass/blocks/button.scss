@@ -14,15 +14,15 @@
   border: 1px solid $brown;
   transition-duration: 0.3s;
 
+  cursor: pointer;
+
   &:hover,
   &:focus {
     background-color: $brown;
     color: $dark;
-    transition-duration: 0.3s;
   }
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
   }
 }
