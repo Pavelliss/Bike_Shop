@@ -27,12 +27,10 @@
     &:hover,
     &:focus {
       color: $red;
-      transition-duration: 0.3s;
     }
 
     &:active {
       opacity: 0.3;
-      transition-duration: 0.3s;
     }
   }
 
@@ -86,7 +84,6 @@
   &:hover,
   &:focus {
     color: $dark;
-    transition-duration: 0.3s;
 
     &::before,
     &::after {
@@ -96,7 +93,6 @@
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
   }
 
   &::before,
@@ -204,6 +200,7 @@
   border: none;
   background-color: transparent;
 
+  transition-duration: 0.3s;
   cursor: pointer;
 
   &::before,

@@ -111,6 +111,15 @@
   li {
     width: 16px;
     height: 16px;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 }
 

@@ -264,14 +264,18 @@
 
   .header__container-nav {
     margin-top: 0;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+
+    z-index: 10;
   }
 
   .header__container-nav--active,
   .nojs {
-    @include position-abs(0, 0);
+    @include position-abs(0, -15px);
 
     min-height: 568px;
-    width: 95%;
+    width: 105%;
     padding-left: 9.5%;
     box-sizing: border-box;
 
@@ -291,6 +295,7 @@
     .header__button {
       &::before {
         top: 5px;
+        left: 15px;
 
         width: 17px;
         box-shadow: none;
@@ -299,7 +304,7 @@
       }
 
       &::after {
-        @include position-abs(5px, 0);
+        @include position-abs(5px, 15px);
         content: "";
         width: 17px;
         height: 2px;

@@ -102,13 +102,10 @@
     top: 243px;
     width: 74px;
     height: 74px;
-
-    transition-duration: 0.3s;
   }
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
   }
 }
 
@@ -161,12 +158,10 @@
   &:hover,
   &:focus {
     color: $dark;
-    transition-duration: 0.3s;
   }
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
   }
 }
 
@@ -211,12 +206,10 @@
   &:hover,
   &:focus {
     background-color: $dark;
-    transition-duration: 0.3s;
   }
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
   }
 }
 
@@ -238,25 +231,40 @@
   &:hover svg,
   &:focus svg {
     fill: $dark;
-    transition-duration: 0.3s;
   }
 
   &:active {
     opacity: 0.3;
-    transition-duration: 0.3s;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .catalog__block-layout p {
+    display: none;
   }
 }
 
 @media (max-width: $mobile-width) {
+  .catalog {
+    width: 100%;
+  }
+
   .catalog__image {
     min-height: 270px;
 
+    &::before {
+      top: 32px;
+      height: 166px;
+    }
+
     img {
-      margin-top: 7px;
+      margin-top: -26px;
     }
   }
 
   .catalog__brand {
+    padding: 0 62px;
+
     font-size: 22px;
     line-height: 30px;
   }
@@ -269,47 +277,18 @@
   }
 
   .catalog__basket {
-    top: 195px;
+    top: 160px;
 
     &:hover,
     &:focus {
-      top: 195px;
+      top: 160px;
       width: 50px;
       height: 50px;
       opacity: 0.6;
-      transition-duration: 0.3s;
     }
 
     &:active {
       opacity: 0.3;
-      transition-duration: 0.3s;
-    }
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .catalog__block-layout {
-    p {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: $mobile-width) {
-  .catalog {
-    width: 100%;
-
-    .catalog__basket {
-      top: 160px;
-    }
-
-    .catalog__image::before {
-      top: 32px;
-      height: 166px;
-    }
-
-    img {
-      margin-top: -26px;
     }
   }
 
@@ -328,6 +307,7 @@
   }
 
   .catalog__block-layout {
+    margin-top: 0;
     margin-bottom: 0;
     padding-top: 6px;
   }
@@ -336,7 +316,9 @@
     display: none;
   }
 
-  .catalog__brand {
-    padding: 0 62px;
+  @media (min-width: 640px) {
+    .catalog__block-layout {
+      margin-top: 10px;
+    }
   }
 }

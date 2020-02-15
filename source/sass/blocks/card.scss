@@ -245,12 +245,13 @@
 
   .card__image {
     position: relative;
+    top: 0;
 
     width: 100%;
     margin-bottom: 20.5%;
 
     &::before {
-      top: -16px;
+      top: 0;
       left: 9%;
 
       width: 79%;
@@ -260,7 +261,7 @@
 
   .card__assessment {
     width: 60%;
-    margin: 0 auto;
+    margin-left: 17%;
     margin-top: -13px;
 
     span {
@@ -277,17 +278,24 @@
   .card__container-colors {
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 27%;
     left: 37.4%;
-    bottom: -5.4%;
+    bottom: -11%;
   }
 
   .card__zoom {
     left: 41.2%;
-    bottom: -36%;
+    bottom: -42%;
 
     width: 17%;
     height: 24%;
+  }
+
+  .card__bookmark {
+    bottom: 37%;
+    right: 16.2%;
+
+    display: block;
   }
 
   .card__button {
