@@ -44,6 +44,10 @@
     color: inherit;
   }
 
+  &--hidden {
+    display: none;
+  }
+
   &--active {
     color: $red;
   }
@@ -111,6 +115,10 @@
   .pagination__item {
     font-size: 22px;
     line-height: 22px;
+
+    &--hidden {
+      display: block;
+    }
   }
 
   .pagination__link {

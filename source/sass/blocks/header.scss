@@ -271,7 +271,7 @@
   }
 
   .header__container-nav--active,
-  .nojs {
+  .nojs-header {
     @include position-abs(0, -15px);
 
     min-height: 568px;
@@ -314,6 +314,15 @@
 
         transform: rotate(-45deg);
       }
+    }
+  }
+
+  .nojs-header {
+    width: 100%;
+    position: relative;
+
+    .header__button {
+      display: none;
     }
   }
 

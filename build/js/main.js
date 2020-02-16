@@ -5,6 +5,9 @@
   var headerButton = headerContainer.querySelector('.header__button');
   var filter = document.querySelector('.filter');
   var promoItems = document.querySelectorAll('.prod-info__item');
+  var nojsHeader = document.querySelector('.nojs-header');
+
+  nojsHeader.classList.remove('nojs-header');
 
   var removeClass = function (element) {
     if (element.classList.contains('prod-info__item--active')) {
@@ -31,7 +34,11 @@
   });
 
   if (filter) {
+    var nojsFilter = document.querySelector('.nojs-filter');
     var filterContainers = filter.querySelectorAll('.filter__container-form');
+
+    nojsFilter.classList.remove('nojs-filter');
+
     filterContainers.forEach(function (container) {
       var button = container.querySelector('.filter__button');
       button.addEventListener('click', function () {
@@ -81,31 +88,9 @@
   var swiperBikes = new Swiper('#slider-bikes', {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    centeredSlides: true,
+    initialSlide: 10,
     loop: true,
-
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 47,
-        slidesPerGroup: 3,
-      },
-      768: {
-        slidesPerView: 2,
-        spaceBetween: 47,
-        slidesPerGroup: 2,
-      }
-    }
-  });
-
-  var swiperAccessories = new Swiper('#slider-accessories', {
-    slidesPerView: 1,
-    slidesPerGroup: 1,
-    loop: true,
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
@@ -114,14 +99,39 @@
     breakpoints: {
       1200: {
         slidesPerView: 4,
-        slidesPerGroup: 1,
-        spaceBetween: 104,
+        slidesPerGroup: 3,
+        initialSlide: 1,
       },
-      768: {
+      900: {
         slidesPerView: 3,
-        spaceBetween: 39,
-        slidesPerGroup: 1,
-      }
+        slidesPerGroup: 2,
+      },
+    }
+  });
+
+  var offset = -0.101; // %10
+  var swiperAccessories = new Swiper('#slider-accessories', {
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    centeredSlides: true,
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    breakpoints: {
+      1200: {
+        slidesPerView: 5,
+        slidesPerGroup: 4,
+        initialSlide: 7,
+        slidesOffsetBefore: window.innerWidth * offset,
+      },
+      900: {
+        slidesPerView: 3,
+        slidesOffsetBefore: 0,
+        initialSlide: 1,
+      },
     }
   });
 }());

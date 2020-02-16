@@ -45,6 +45,14 @@
   }
 }
 
+.nojs-filter {
+  padding-bottom: 10px;
+
+  label {
+    display: block;
+  }
+}
+
 .filter__button-show {
   display: none;
 
@@ -264,6 +272,31 @@
       .filter__button-show {
         display: none;
       }
+    }
+  }
+
+  .nojs-filter {
+    .main__container {
+      flex-direction: column;
+    }
+
+    .filter {
+      position: relative;
+      width: 97%;
+
+      padding-left: 15px;
+
+      box-shadow: 4px 0 20px rgba(23, 23, 22, 0.3);
+      background-color: $light;
+      border-top: 1px solid $brown;
+    }
+
+    .filter__button-close {
+      display: none;
+    }
+
+    form {
+      display: block;
     }
   }
 
