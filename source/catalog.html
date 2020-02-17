@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Каталог велосипедов">
   <title>Chopper Bikeshop</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -111,11 +112,14 @@
           </button>
           <form method="POST" action="#">
             <div class="filter__container">
-              <select class="select filter__select" name="sorting">
-                <option value="popular">По популярности</option>
-                <option value="high-price">Сначала дешевле</option>
-                <option value="low-price">Сначала дешевле</option>
-              </select>
+              <label class="filter__label">
+                <span class="visually-hidden">Сортировать по:</span>
+                <select class="select filter__select" name="sorting">
+                  <option value="popular">По популярности</option>
+                  <option value="high-price">Сначала дешевле</option>
+                  <option value="low-price">Сначала дешевле</option>
+                </select>
+              </label>
               <div class="filter__button-container">
                 <button class="filter__button-reset" type="reset">
                   Сбросить фильтры <span class="filter__value">(3)</span>

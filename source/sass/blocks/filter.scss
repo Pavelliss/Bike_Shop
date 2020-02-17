@@ -43,6 +43,19 @@
   input:checked + .filter__element::before {
     display: block;
   }
+
+  .filter__label {
+    position: absolute;
+    top: -10px;
+
+    display: block;
+
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: 0.04em;
+
+    order: 1;
+  }
 }
 
 .nojs-filter {
@@ -74,7 +87,6 @@
   position: absolute;
   left: 312px;
   padding-right: 20px;
-  order: 1;
 }
 
 .filter__button-reset {
@@ -273,6 +285,12 @@
         display: none;
       }
     }
+
+    .filter__label {
+      position: relative;
+
+      padding-left: 0;
+    }
   }
 
   .nojs-filter {
@@ -380,7 +398,7 @@
   .filter__container {
     flex-direction: column;
     margin-top: 11px;
-    margin-bottom: 66px;
+    margin-bottom: 56px;
     margin-left: 5px;
 
     select {
