@@ -52,15 +52,19 @@
 @media (max-width: $mobile-width) {
   .main-screen__container {
     margin-top: 0;
+    padding-bottom: 20px;
   }
 
   .main-screen {
     width: 244px;
     margin-top: 15px;
+    margin-bottom: 0;
   }
 
   .main-screen__title {
     min-width: 250px;
+    margin-bottom: 133px;
+
     font-size: 43px;
 
     span {
@@ -71,6 +75,5 @@
 
   .main-screen__button {
     margin: 0 auto;
-    margin-top: 132px;
   }
 }
