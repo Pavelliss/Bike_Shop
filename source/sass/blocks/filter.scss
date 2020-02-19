@@ -74,6 +74,8 @@
   color: $red;
 
   cursor: pointer;
+
+  outline: none;
 }
 
 .filter__container {
@@ -87,6 +89,8 @@
   position: absolute;
   left: 312px;
   padding-right: 20px;
+
+  outline: none;
 }
 
 .filter__button-reset {
@@ -99,6 +103,7 @@
   border: none;
 
   transition-duration: 0.3s;
+  outline: none;
   cursor: pointer;
 
   &:hover,

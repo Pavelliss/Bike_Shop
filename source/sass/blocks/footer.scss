@@ -119,8 +119,12 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  font-weight: normal;
   text-transform: none;
+  color: inherit;
+
+  b {
+    font-weight: normal;
+  }
 }
 
 .footer__span--mobile {

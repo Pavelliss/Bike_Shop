@@ -91,6 +91,8 @@
 
   .slider__button {
     top: 420px;
+
+    outline: none;
   }
 
   .swiper-slide-next + li {
@@ -275,6 +277,12 @@
 
     .catalog__brand {
       padding: 0 10%;
+    }
+  }
+
+  .slider--card {
+    .slider__button {
+      top: 375px;
     }
   }
 
