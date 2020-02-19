@@ -113,6 +113,7 @@
   var swiperAccessories = new Swiper('#slider-accessories', {
     slidesPerView: 1,
     slidesPerGroup: 1,
+    initialSlide: 4,
     centeredSlides: true,
     loop: true,
     navigation: {
@@ -122,6 +123,7 @@
 
     breakpoints: {
       1200: {
+        initialSlide: 0,
         slidesPerView: 5,
         slidesPerGroup: 4,
         slidesOffsetBefore: window.innerWidth * offset,

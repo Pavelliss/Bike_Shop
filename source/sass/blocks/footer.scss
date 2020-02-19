@@ -121,9 +121,19 @@
   letter-spacing: 0.2px;
   text-transform: none;
   color: inherit;
+  transition-duration: 0.3s;
 
   b {
     font-weight: normal;
+  }
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

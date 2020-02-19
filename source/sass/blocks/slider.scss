@@ -29,7 +29,7 @@
   }
 
   .catalog__brand {
-    padding: 0 26%;
+    padding: 0 32.3%;
   }
 
   p {
@@ -78,7 +78,7 @@
   }
 
   .catalog__brand {
-    padding: 0 20%;
+    padding: 0 26%;
 
     span {
       display: block;
@@ -91,8 +91,6 @@
 
   .slider__button {
     top: 420px;
-
-    outline: none;
   }
 
   .swiper-slide-next + li {
@@ -106,6 +104,18 @@
   .slider__title {
     margin-bottom: 38px;
     padding-left: 6.5%;
+  }
+
+  .slider__button {
+    top: 327px;
+
+    &--next {
+      right: 8.6%;
+    }
+
+    &--back {
+      left: 8.3%;
+    }
   }
 }
 
@@ -151,6 +161,7 @@
   background-repeat: no-repeat;
   border: none;
   transition-duration: 0.3s;
+  outline: none;
 
   color: transparent;
 
@@ -184,7 +195,7 @@
 
   max-width: 1120px;
   margin: 0 auto;
-  margin-top: 103px;
+  margin-top: 43px;
 
   display: flex;
   align-items: center;
@@ -242,6 +253,10 @@
       margin-bottom: 29px;
       font-size: 16px;
       line-height: 24px;
+    }
+
+    .catalog__brand {
+      padding: 0 26%;
     }
   }
 
