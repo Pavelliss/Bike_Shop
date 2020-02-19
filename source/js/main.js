@@ -123,8 +123,7 @@
     breakpoints: {
       1200: {
         slidesPerView: 5,
-        slidesPerGroup: 1,
-        initialSlide: 7,
+        slidesPerGroup: 4,
         slidesOffsetBefore: window.innerWidth * offset,
       },
       900: {

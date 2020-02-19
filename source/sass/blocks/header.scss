@@ -177,7 +177,7 @@
 
 @media (max-width: $mobile-width) {
   .header {
-    min-height: 568px;
+    min-height: auto;
     padding: 0 15px;
 
     background-image: url("../img/main-image-mobile@1x.jpg");
