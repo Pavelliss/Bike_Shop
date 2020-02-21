@@ -6,6 +6,7 @@
   var filter = document.querySelector('.filter');
   var promoItems = document.querySelectorAll('.prod-info__item');
   var nojsHeader = document.querySelector('.nojs-header');
+  var mobileWidth = 767;
 
   nojsHeader.classList.remove('nojs-header');
 
@@ -50,10 +51,16 @@
   if (promoItems) {
     promoItems.forEach(function (element) {
       var buttonTab = element.querySelector('.prod-info__tab');
-      buttonTab.addEventListener('click', function () {
-        promoItems.forEach(removeClass);
-        element.classList.add('prod-info__item--active');
-      });
+      if (window.innerWidth <= mobileWidth) {
+        buttonTab.addEventListener('click', function () {
+          element.classList.toggle('prod-info__item--active');
+        });
+      } else {
+        buttonTab.addEventListener('click', function () {
+          promoItems.forEach(removeClass);
+          element.classList.add('prod-info__item--active');
+        });
+      }
     });
   }
 
